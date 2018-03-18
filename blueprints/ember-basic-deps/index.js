@@ -2,6 +2,11 @@
 module.exports = {
   description: '',
 
+  normalizeEntityName(entityName) {
+    // Normalize and validate entity name here.
+    return entityName;
+  },
+
   // locals(options) {
   //   // Return custom template variables here.
   //   return {
