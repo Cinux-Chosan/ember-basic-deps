@@ -1,4 +1,4 @@
-ember-basic-dep
+ember-basic-deps
 ==============================================================================
 
 [Short description of the addon.]
@@ -7,7 +7,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-basic-dep
+ember install ember-basic-deps
 ```
 
 
@@ -23,7 +23,7 @@ Contributing
 ### Installation
 
 * `git clone <repository-url>`
-* `cd ember-basic-dep`
+* `cd ember-basic-deps`
 * `npm install`
 
 ### Linting

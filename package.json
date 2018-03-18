@@ -1,6 +1,6 @@
 {
-  "name": "ember-basic-dep",
-  "version": "0.0.0",
+  "name": "ember-basic-deps",
+  "version": "0.0.01",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
