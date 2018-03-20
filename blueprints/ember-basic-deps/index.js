@@ -16,8 +16,7 @@ module.exports = {
 
   beforeInstall() {
     return this.addPackagesToProject([
-      {name: 'bootstrap'},
-      {name: 'normalize.css'}
+      {name: 'bootstrap'}
     ])
   }
 
