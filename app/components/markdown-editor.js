@@ -1,0 +1,1 @@
+export { default } from 'chosan-ember-basic-deps/components/markdown-editor/component';
