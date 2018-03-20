@@ -4,7 +4,6 @@ import base from '../../mixins/base';
 import { load, check, moduleName } from '../../utils/util';
 import { later } from '@ember/runloop';
 
-
 export default Component.extend(base, {
   layout,
   width: '100%',
