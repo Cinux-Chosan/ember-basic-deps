@@ -3,9 +3,12 @@ import layout from './template';
 import base from '../../mixins/base';
 import { load, check, moduleName } from '../../utils/util';
 import { later } from '@ember/runloop';
+import styles from './styles';    // or './styles' in pod format
 
 export default Component.extend(base, {
   layout,
+  styles,
+  localClassNames: 'root',
   width: '100%',
   height: 550,
   content: '',

@@ -1,0 +1,18 @@
+.root {
+  li:global(.L0),
+  li:global(.L1),
+  li:global(.L2),
+  li:global(.L3),
+  li:global(.L5),
+  li:global(.L6),
+  li:global(.L7),
+  li:global(.L8) {
+    list-style-type: decimal !important;
+  }
+  pre:global(.prettyprint){
+    border-radius: 5px;
+  }
+  :global(.linenums) {
+    min-width: 100%;
+  }
+}
