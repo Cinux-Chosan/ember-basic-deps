@@ -15,13 +15,14 @@ module.exports = {
   // }
 
   beforeInstall() {
+    console.log('beforeInstall')
     return this.addPackagesToProject([
-      {name: 'bootstrap'},
       {name: 'ember-cli-sass'},
       {name: 'ember-css-modules'},
       {name: 'ember-css-modules-sass'},
       {name: 'ember-decorators'},
-      {name: 'liquid-fire'}
+      {name: 'liquid-fire'},
+      {name: 'bootstrap'}
     ])
   }
 
