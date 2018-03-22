@@ -14,8 +14,13 @@ module.exports = {
   //   };
   // }
 
-  beforeInstall() {
-    console.log('beforeInstall')
+  // beforeInstall() {
+
+  // }
+
+  afterInstall(options) {
+    // Perform extra work here.
+    console.log('afterInstall')
     return this.addPackagesToProject([
       {name: 'ember-cli-sass'},
       {name: 'ember-css-modules'},
@@ -25,8 +30,4 @@ module.exports = {
       {name: 'bootstrap'}
     ])
   }
-
-  // afterInstall(options) {
-  //   // Perform extra work here.
-  // }
 };
