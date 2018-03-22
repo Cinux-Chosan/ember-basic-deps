@@ -16,7 +16,12 @@ module.exports = {
 
   beforeInstall() {
     return this.addPackagesToProject([
-      {name: 'bootstrap'}
+      {name: 'bootstrap'},
+      {name: 'ember-cli-sass'},
+      {name: 'ember-css-modules'},
+      {name: 'ember-css-modules-sass'},
+      {name: 'ember-decorators'},
+      {name: 'liquid-fire'}
     ])
   }
 
