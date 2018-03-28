@@ -24,6 +24,7 @@ export default Component.extend(base, {
     later(() => {
       editor = window.KindEditor.create('#' + this.get('elementId'), { width, height, basePath });
       editor.html(this.content);
+      editor.getContent = editor.html;
       this.set('editor', editor);
     });
   }

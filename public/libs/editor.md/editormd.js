@@ -12,7 +12,7 @@
 
 ;(function(factory) {
     "use strict";
-    return window.editormd = factory();  // 这里手动拦截, 由于 ember loader 定义了 define, 会导致这里执行到 sea.js 里面去, 查看 editormd.js
+     return window.editormd = factory();  // 这里手动拦截, 由于 ember loader 定义了 define, 会导致这里执行到 sea.js 里面去, 查看 editormd.js
 	// CommonJS/Node.js
 	if (typeof require === "function" && typeof exports === "object" && typeof module === "object")
     {

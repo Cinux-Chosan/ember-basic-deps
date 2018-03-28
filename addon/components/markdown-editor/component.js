@@ -25,6 +25,7 @@ export default Component.extend(base, {
     await check(() => window.editormd);
     later(() => {
       editor = window.editormd(this.get('elementId'), { width, height, path : `${baseDir}lib/` });
+      editor.getContent = editor.getMarkdown;
       this.set('editor', editor);
     });
   }
