@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 let moduleName = 'chosan-ember-basic-deps';
 
 function check(fn, timeout = 15000) {
@@ -38,8 +40,17 @@ function load(files) {
   }
 }
 
+function tip(msg, type = 'info') {
+  let opts = {
+    extraClasses: 'messenger-on-top messenger-on-right messenger-fixed',
+    type
+  }
+  window.Messenger(opts).post(msg).update(opts);
+}
+
 export {
   check,
   load,
-  moduleName
+  moduleName,
+  tip
 }

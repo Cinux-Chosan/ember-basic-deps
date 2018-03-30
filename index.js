@@ -7,10 +7,10 @@ module.exports = {
     let target = parentAddon || app;
     let options = target.options || {};
     let basicDepsOptions = options.basicDepsOptions || {};
+    options.fingerprint = options.fingerprint || {};
+    options.fingerprint.exclude = options.fingerprint.exclude || [];
+    options.fingerprint.exclude.push(`${this.name}/**/*.*`);
     try {
-      options.fingerprint = options.fingerprint || {};
-      options.fingerprint.exclude = options.fingerprint.exclude || [];
-      options.fingerprint.exclude.push(`${this.name}/**/*.*`);
       if (basicDepsOptions.bootstrapOptions.autoImport) {
         target.import('node_modules/bootstrap/dist/css/bootstrap.min.css');
         target.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
@@ -18,5 +18,17 @@ module.exports = {
     } catch (e) {
       //
     }
+
+    try {
+      if (basicDepsOptions.messengerOptions.autoImport) {
+        target.import('vendor/messenger/build/css/messenger.css');
+        target.import('vendor/messenger/build/css/messenger-theme.future.css');
+        target.import('vendor/messenger/build/js/messenger.min.js');
+      }
+    } catch (e) {
+      //
+    }
+
+
   }
 }
