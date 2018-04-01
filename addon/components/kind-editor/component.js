@@ -11,6 +11,9 @@ export default Component.extend(base, {
   width: '100%',
   height: '550px',
   editor: '',
+  uploadJson: '/upload',
+  fileManagerJson: '/fileManager',
+  allowFileManager: false,
   async init() {
     this._super(...arguments);
     let editor,
@@ -22,10 +25,14 @@ export default Component.extend(base, {
       load(`${basePath}lang/zh-CN.js`);
     }
     later(() => {
-      editor = window.KindEditor.create('#' + this.get('elementId'), { width, height, basePath });
+      let { uploadJson, fileManagerJson, allowFileManager } = this.getProperties(['uploadJson', 'fileManagerJson', 'allowFileManager']);
+      editor = window.KindEditor.create('#' + this.get('elementId'), {
+        width, height, basePath, uploadJson, fileManagerJson, allowFileManager
+      });
       editor.html(this.content);
       editor.getContent = editor.html;
       this.set('editor', editor);
+
     });
   }
 });
