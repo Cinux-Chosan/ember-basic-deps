@@ -29,6 +29,12 @@ module.exports = {
       //
     }
 
-
+    try {
+      if (basicDepsOptions.markdownCssOptions.autoImport) {
+        target.import('node_modules/github-markdown-css/github-markdown.css');
+      }
+    } catch (e) {
+      //
+    }
   }
 }

@@ -18,16 +18,16 @@ module.exports = {
 
   // }
 
-  afterInstall(options) {
+  afterInstall(/* options */) {
     // Perform extra work here.
-    console.log('afterInstall')
     return this.addPackagesToProject([
       {name: 'ember-cli-sass'},
       {name: 'ember-css-modules'},
       {name: 'ember-css-modules-sass'},
       {name: 'ember-decorators'},
       {name: 'liquid-fire'},
-      {name: 'bootstrap'}
+      {name: 'bootstrap'},
+      {name: 'github-markdown-css'}
     ])
   }
 };
