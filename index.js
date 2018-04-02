@@ -10,6 +10,7 @@ module.exports = {
     options.fingerprint = options.fingerprint || {};
     options.fingerprint.exclude = options.fingerprint.exclude || [];
     options.fingerprint.exclude.push(`${this.name}/**/*.*`);
+
     try {
       if (basicDepsOptions.bootstrapOptions.autoImport) {
         target.import('node_modules/bootstrap/dist/css/bootstrap.min.css');
